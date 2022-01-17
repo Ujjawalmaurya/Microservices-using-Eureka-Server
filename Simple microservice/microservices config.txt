@@ -1,0 +1,6 @@
+User-services
+	port: 1001
+Contact-service
+	port:1002
+Eureka
+	port:8761
