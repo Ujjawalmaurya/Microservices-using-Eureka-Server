@@ -23,6 +23,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * in other URL host contact-service instead of host:port it's worked by registering with microservices
+     * @param userId
+     * @return
+     */
     @RequestMapping("/{userId}")
     public User getUserInfo(@PathVariable("userId") Long userId){
         // http://localhost:1002/contact/1003

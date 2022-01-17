@@ -1,0 +1,22 @@
+server:
+  port: 2021
+
+eureka:
+  instance:
+    hostname: localhost
+
+# not working
+spring:
+  application:
+    name: api-gateway
+  cloude:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb:/user-service
+          predicates:
+            - Path=/user/**
+        - id: contact-service
+          uri: lb:/contact-service
+          predicates:
+            - Path=/contact/**
